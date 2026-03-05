@@ -1,146 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ckb" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - PurpleWallet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #ffffff, #f3e8ff);
-        }
+<title>دروستکردنی هەژمار</title>
 
-        .signup-container {
-            width: 420px;
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(106, 13, 173, 0.2);
-        }
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .signup-container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #6a0dad;
-            font-weight: 700;
-        }
+<style>
 
-        .input-group {
-            margin-bottom: 18px;
-        }
+body{
+    margin:0;
+    font-family:"IBM Plex Sans Arabic", sans-serif;
+    background:#f4f3ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
 
-        .input-group label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: 500;
-            color: #444;
-        }
+/* Signup Box */
 
-        .input-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            outline: none;
-            transition: 0.3s;
-        }
+.signup-container{
+    width:420px;
+    background:white;
+    padding:40px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
 
-        .input-group input:focus {
-            border-color: #6a0dad;
-            box-shadow: 0 0 8px rgba(106, 13, 173, 0.2);
-        }
+.signup-container h1{
+    text-align:center;
+    color:#6a0dad;
+    font-size:36px;
+    margin-bottom:25px;
+}
 
-        .btn-signup {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 30px;
-            background: #6a0dad;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-top: 10px;
-        }
+/* Inputs */
 
-        .btn-signup:hover {
-            background: #4b0082;
-        }
+.input-group{
+    margin-bottom:18px;
+}
 
-        .login-link {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:500;
+}
 
-        .login-link a {
-            color: #6a0dad;
-            text-decoration: none;
-            font-weight: 600;
-        }
+.input-group input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-family:"IBM Plex Sans Arabic", sans-serif;
+}
 
-        .error {
-            color: red;
-            font-size: 13px;
-            margin-top: 5px;
-        }
+/* Button */
 
-        @media(max-width: 500px) {
-            .signup-container {
-                width: 90%;
-                padding: 30px;
-            }
-        }
-    </style>
+.btn{
+    width:100%;
+    background:#6a0dad;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#4b0082;
+}
+
+/* Login link */
+
+.login-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.login-link a{
+    color:#6a0dad;
+    text-decoration:none;
+    font-weight:600;
+}
+
+</style>
 </head>
+
 <body>
 
 <div class="signup-container">
-    <h2>Create Account</h2>
 
-    <form id="signupForm">
-        <div class="input-group">
-            <label>Full Name</label>
-            <input type="text" id="name" placeholder="Enter your full name">
-            <div class="error" id="nameError"></div>
-        </div>
+<h1> دروستکرنا هەژمارێ</h1>
 
-        <div class="input-group">
-            <label>Email Address</label>
-            <input type="email" id="email" placeholder="Enter your email">
-            <div class="error" id="emailError"></div>
-        </div>
+<form>
 
-        <div class="input-group">
-            <label>Password</label>
-            <input type="password" id="password" placeholder="Enter your password">
-            <div class="error" id="passwordError"></div>
-        </div>
-
-        <div class="input-group">
-            <label>Confirm Password</label>
-            <input type="password" id="confirmPassword" placeholder="Confirm your password">
-            <div class="error" id="confirmError"></div>
-        </div>
-
-        <button type="submit" class="btn-signup">Sign Up</button>
-    </form>
-
-    <div class="login-link">
-        Already have an account? <a href="login.html">Login</a>
-    </div>
+<div class="input-group">
+<label>ناڤێ تەمام</label>
+<input type="text" placeholder="ناڤێ خو بنڤیسە">
 </div>
+
+<div class="input-group">
+<label>ئیمیل</label>
+<input type="email" placeholder="ئیمیلی خو بنڤیسە">
+</div>
+
+<div class="input-group">
+<label>ژمارا نهێنی</label>
+<input type="password" placeholder="ژمارا نهێنی دروستبکە">
+</div>
+
+<div class="input-group">
+<label>دوبارەکرنا ژمارا نهێنی</label>
+<input type="password" placeholder="ژمارا نهێنی دوبارە بنڤیسە">
+</div>
+
+<button class="btn">هژمارا خو دروست بکە</button>
+
+</form>
+
+<div class="login-link">
+ تە هژمار هەیە ؟ <a href="login.html">چوونەژوور</a>
+</div>
+
+</div>
+
+</body>
+</html>
 
 <script>
     const form = document.getElementById('signupForm');
