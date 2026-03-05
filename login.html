@@ -1,140 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ckb" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - PurpleWallet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #ffffff, #f3e8ff);
-        }
+<title>چوونەژوورەوە</title>
 
-        .login-container {
-            width: 400px;
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(106, 13, 173, 0.2);
-        }
+<!-- IBM Plex Sans Arabic -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #6a0dad;
-            font-weight: 700;
-        }
+<style>
 
-        .input-group {
-            margin-bottom: 20px;
-        }
+body{
+    margin:0;
+    font-family:"IBM Plex Sans Arabic", sans-serif;
+    background:#f4f3ff;
+}
 
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #444;
-        }
+/* Navbar */
 
-        .input-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            outline: none;
-            transition: 0.3s;
-        }
+nav{
+    background:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
 
-        .input-group input:focus {
-            border-color: #6a0dad;
-            box-shadow: 0 0 8px rgba(106, 13, 173, 0.2);
-        }
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#6a0dad;
+}
 
-        .forgot {
-            text-align: right;
-            margin-bottom: 20px;
-        }
+.menu a{
+    margin-right:20px;
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
 
-        .forgot a {
-            text-decoration: none;
-            color: #6a0dad;
-            font-size: 14px;
-        }
+/* Login Section */
 
-        .btn-login {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 30px;
-            background: #6a0dad;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+.login-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+}
 
-        .btn-login:hover {
-            background: #4b0082;
-        }
+/* Login Card */
 
-        .register-link {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
+.login-card{
+    width:420px;
+    background:white;
+    padding:40px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
 
-        .register-link a {
-            color: #6a0dad;
-            text-decoration: none;
-            font-weight: 600;
-        }
+.login-card h1{
+    text-align:center;
+    font-size:48px;
+    color:#6a0dad;
+    margin-bottom:25px;
+}
 
-        @media(max-width: 500px) {
-            .login-container {
-                width: 90%;
-                padding: 30px;
-            }
-        }
-    </style>
+/* Inputs */
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:500;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-family:"IBM Plex Sans Arabic", sans-serif;
+}
+
+/* Button */
+
+.btn{
+    width:100%;
+    background:#6a0dad;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#4b0082;
+}
+
+/* Signup link */
+
+.signup-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.signup-link a{
+    color:#6a0dad;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* Footer */
+
+footer{
+    margin-top:50px;
+    background:#6a0dad;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
 </head>
+
 <body>
 
-<div class="login-container">
-    <h2>Welcome Back</h2>
+<!-- Navbar -->
 
-    <form>
-        <div class="input-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="Enter your email" required>
-        </div>
+<nav>
 
-        <div class="input-group">
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password" required>
-        </div>
-
-        <div class="forgot">
-            <a href="#">Forgot Password?</a>
-        </div>
-
-        <button type="submit" class="btn-login" href="dashboard.html">Login</button>
-    </form>
-
-    <div class="register-link">
-        Don't have an account? <a href="signup.html">Register</a>
-    </div>
+<div class="logo">
+Vertex Wallet
 </div>
+
+<div class="menu">
+<a href="home.html">سەرەکی</a>
+<a href="about.html">دەربارە</a>
+<a href="signup.html">دروستکرنا هژمارێ</a>
+</div>
+
+</nav>
+
+
+<!-- Login -->
+
+<section class="login-section">
+
+<div class="login-card">
+
+<h1>چوونەژوور</h1>
+
+<form>
+
+<div class="input-group">
+<label>ئیمیل</label>
+<input type="email" placeholder="ئیمیلی خو بنڤیسە">
+</div>
+
+<div class="input-group">
+<label>ژمارا نهێنی</label>
+<input type="password" placeholder="ژمارا نهێنی بنڤیسە">
+</div>
+
+<button class="btn">چوونەژوور</button>
+
+</form>
+
+<div class="signup-link">
+هژمار تە هەیە ؟ <a href="signup.html">دروستکرنا هەژمارێ</a>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+© 2026 Vertex Wallet
+</footer>
 
 </body>
 </html>
